@@ -20,7 +20,7 @@ export const TravelForm = ({getListItems}: TravelFormType) => {
   }
   const handleButton = (e: React.SyntheticEvent) => {
     e.preventDefault()
-    getListItems({quantity, description, id})
+    getListItems({quantity, description, id, packed: false})
     setId(prevState => prevState + 1)
     setQuantity(1)
     setDescription('')

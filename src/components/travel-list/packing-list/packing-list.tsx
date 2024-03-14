@@ -8,6 +8,9 @@ type PackingListType = {
   onDeleteItem: (id: number) => void
   onHandleSort: (item: string) => void
   onHandleClearList: () => void
+  onSetPackedItem(id: number, packedStatus: boolean): void
+  packedStatus(): void
+  calculatePacked(): void
 }
 export enum SortSelect  {
   Order = 'order',
@@ -15,7 +18,7 @@ export enum SortSelect  {
   Status = 'status'
 }
 
-export const PackingList = ({listItem, onDeleteItem, onHandleClearList, onHandleSort}: PackingListType) => {
+export const PackingList = ({listItem, onDeleteItem, onHandleClearList, onHandleSort, onSetPackedItem, packedStatus, calculatePacked}: PackingListType) => {
   const [sortValue, setSortValue] = useState<string>(SortSelect.Order)
   useEffect(() => {
     onHandleSort(sortValue)
@@ -28,7 +31,9 @@ export const PackingList = ({listItem, onDeleteItem, onHandleClearList, onHandle
   return(
     <div className={styles.list}>
       <ul>{
-        listItem.map(item => <PackingItem key={item.id} item={item} onDeleteItem={onDeleteItem}/>)
+        listItem.map(item => <PackingItem key={item.id} item={item} onDeleteItem={onDeleteItem} onSetPackedItem={onSetPackedItem} packedStatus={packedStatus}
+                                          calculatePacked={calculatePacked}
+        />)
       }</ul>
       <label htmlFor='sort'>
         <select name='sort' id='sort' value={sortValue} onChange={handleSortValue}>
