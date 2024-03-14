@@ -1,0 +1,59 @@
+.closeBtn {
+  display: block;
+  border: none;
+  background: none;
+  margin: 0 auto;
+  width: 10px;
+  font-size: 42px;
+  cursor: pointer;
+}
+
+.wrapper {
+  margin: 20px auto 0 auto;
+  width: 60%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #dcd7d7;
+
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    
+    &__numbers {
+      border-radius: 50%;
+      background-color: #9b9797;
+      padding: 3px 10px;
+      border: 1px solid #8079e1;
+      color: white;
+    }
+  }
+
+  .message {
+    margin: 30px auto;
+    padding-bottom: 3px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid blue;
+  }
+
+  .stepsButtons {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    &__btn {
+      padding: 10px 15px;
+      font-size: 1.5rem;
+      border-radius: 40%;
+      border: none;
+      color: #fff;
+      background-color: #8079e1;
+      cursor: pointer;
+    }
+  }
+  .active {
+    background-color: #8079e1;
+  }
+}

@@ -1,0 +1,33 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  .textItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  & p {
+    font-size: 2.5rem;
+  }
+
+  & button {
+    color: red;
+    font-size: 4rem;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  & input[type="checkbox"] {
+    height: 2rem;
+    width: 2rem;
+    accent-color: #e5771f;
+  }
+}
+.active {
+  text-decoration: line-through;
+}
