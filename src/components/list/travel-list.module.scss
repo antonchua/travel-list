@@ -1,0 +1,52 @@
+.travelList {
+  background-color: #5a3e2b;
+  color: #ffebb3;
+  padding: 4rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+  height: 100%;
+
+  ul {
+    list-style: none;
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.2rem;
+    justify-content: center;
+    align-content: start;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    select, button {
+      appearance: none;
+      background-color: #ffebb3;
+      color: #5a3e2b;
+      font-family: inherit;
+      border: none;
+      border-radius: 10rem;
+      padding: 1.2rem 3.2rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      background-color: #c04903;
+      color: #ffebb3;
+    }
+  }
+
+
+}

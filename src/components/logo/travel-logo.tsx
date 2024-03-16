@@ -1,5 +1,5 @@
-import tourismLogo from '../../../assets/Tourism logo.png'
-import travelPlane from '../../../assets/travel-plane.webp'
+import tourismLogo from '../../assets/Tourism logo.png'
+import travelPlane from '../../assets/travel-plane.webp'
 import styles from './travel-logo.module.scss'
 
 export const TravelLogo = () => {

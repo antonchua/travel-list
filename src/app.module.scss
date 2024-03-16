@@ -1,6 +1,6 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr auto;
+  font-family: "Quicksand";
 }
